@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/documents_db  # Подключение к базе данных documents_db
+    username: postgres                                  # Имя пользователя PostgreSQL
+    password: pass                                      # Пароль пользователя
+    driver-class-name: org.postgresql.Driver            # Драйвер для PostgreSQL
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect  # Диалект для PostgreSQL
+    hibernate:
+      ddl-auto: update  # Автоматическое обновление схемы базы данных

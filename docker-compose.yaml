@@ -1,0 +1,18 @@
+
+# psql -U postgres documents_db
+# CREATE TABLE IF NOT EXISTS template (template_name VARCHAR(50) NOT NULL PRIMARY KEY);
+# INSERT INTO template (template_name) VALUES ('Шаблон 1');
+# SELECT * FROM template;
+
+services:
+  postgres:
+    image: 'postgres:latest'
+    container_name: 'oop4'
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: pass
+      POSTGRES_DB: documents_db
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
